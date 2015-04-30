@@ -2,30 +2,36 @@ package Shape;
 
 public class ShapeTest {
 	public static void main(String[] args) {
-		
-		//오버라이딩 테스트
-		//Shape rect = new Rect();
-		//Shape circle = new Circle();
 
-		//rect.draw();
-		//circle.draw();
+		Rect rect = new Rect();
+		Circle circle = new Circle();
+		Triangle triangle = new Triangle();
 		
-		//인터페이스 테스트
-		//Drawable drawable = new Point(10,20);
-		//drawable.draw();
-		
-		//instanceof 테스트
-		Circle c = new Circle();
-		
-		System.out.println(c instanceof Circle);
-		System.out.println(c instanceof Shape);
-		System.out.println(c instanceof Drawable);
-		//System.out.println(c instanceof Rect);   //컴파일 에러
-		Shape s = c ;
-		System.out.println(s instanceof Rect);   //이렇게 하면 가능
-		                                         //그러나 결과는 false
-		
+		rect.draw();
+		circle.draw();
+		triangle.draw();
+
+		Drawable drawable = new Point(10, 20);
+		drawable.draw();
+
+		Point Colorpoint = new ColorPoint(20, 30);
+		Colorpoint.setColor("red");
+
+		Colorpoint.draw();
+
+		// calculate area
+
+		rect.setWidth(10);
+		rect.setHeight(10);
+
+		circle.setRadius(10);
+
+		triangle.setWidth(10);
+		triangle.setHeight(10);
+
+		System.out.println(rect.calculateArea());
+		System.out.println(circle.calculateArea());
+		System.out.println(triangle.calculateArea());
+
 	}
 }
-
-

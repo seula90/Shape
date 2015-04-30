@@ -1,6 +1,6 @@
 package Shape;
 
-public abstract class Shape {
+public abstract class Shape implements Visible{
 
 	private String color;
 
@@ -11,10 +11,6 @@ public abstract class Shape {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	
-	/*public void draw() {
-		System.out.println("구체적인 도형을 그릴 수 없습니다.");
-	}*/
 	
 	abstract public double calculateArea();
 	

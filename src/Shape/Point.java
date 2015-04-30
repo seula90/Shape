@@ -3,18 +3,11 @@ package Shape;
 public class Point implements Drawable{
 	private int x;
 	private int y;
-	
-	public Point() {
-		System.out.println("Point 생성자가 호출되었습니다.");
-	}
-	
+		
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
-	/*public Point() {
-		
-	}*/
 	public int getX() {
 		return x;
 	}
@@ -27,21 +20,17 @@ public class Point implements Drawable{
 	public void setY(int y) {
 		this.y = y;
 	}
-	
-	public void show(){
+	public void draw() {
 		System.out.println("좌표 [x= "+x+", y= "+y+"]에 점을 그렸습니다.");
 	}
-	public void show(boolean visible){
+	public void Visible(boolean visible){
 		if (visible == true){
-			show();
+			draw();
 		}
 		else {
 			System.out.println("좌표 [x= "+x+", y= "+y+"]에 점을 지웠습니다.");
 		}
-		
 	}
-	
-	public void draw() {
-		System.out.println("좌표 [x= "+x+", y= "+y+"]에 점을 그렸습니다.");
+	public void setColor(String Color){
 	}
 }
